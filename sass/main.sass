@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&subset=cyrillic-ext')
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=cyrillic')
+$dark: #222329
+$main-blue: #479eff
+$light: #c3c3c3
+$white: #e6e6e6
+$font: 'Roboto Slab', sans-serif
+$text-font: 'Roboto', sans-serif
+/*card colors*/
+$one: rgba(87, 180, 218, 0.9)
+$two: rgba(218, 87, 87, 0.9)
+$three: rgba(87, 218, 149, 0.9)
+$four: rgba(255, 165, 87, 0.9)
+$five: rgba(176, 87, 218, 0.9)
+$six: rgba(87, 213, 218, 0.9)
+$seven: rgba(124, 190, 101, 0.9)
+$eight: rgba(115,115,115,0.9)
+
+
+/**Common**/
+*
+  outline: none!important
+body
+  font-size: 1.2em
+  margin: 0
+  font-family: $font
+  width: 600%
+  overflow-x: hidden
+
+.wrapper
+  height: 100vh
+  overflow: hidden
+  display: block
+
+.menu
+  width: 16.667vw
+  height: 100vh
+  display: block
+  background-color: $dark
+  float: left
+  position: fixed
+  left: 0
+  top: 0
+  bottom: 0
+  z-index: 100
+  & .menu-footer
+    position: fixed
+    bottom: 1em
+    font-size: 0.75em
+    font-weight: 100
+    width: 16.667%
+    display: block
+    text-align: center
+    color: $light
+    & b
+      font-weight: 100
+      color: $main-blue
+  & .logo
+    display: block
+    margin-left: 0.75em
+    margin-top: 1em
+    & .name-wrap
+      display: block
+      float: left
+      & h3
+        font-weight: 100
+        color: $light
+        font-size: 1em
+        margin: 0
+        padding: 0
+        line-height: 0.5em
+        & b
+          font-weight: 100
+          color: $main-blue
+
+      & span
+        color: #6b7c93
+        font-weight: 100
+        font-size: 0.75em
+    & .logo-wrap
+      max-width: 1.5em
+      max-height: 1.5em
+      border-radius: 100%
+      overflow: hidden
+      margin-right: 0.75em
+      display: inline-block
+      float: left
+      & img
+        width: 100%
+
+
+  & ul
+      list-style: none
+      padding: 0
+      margin-left: 1em
+      clear: both
+      & li
+        display: block
+        & a
+          color: $light
+          text-decoration: none
+          font-weight: 100
+          line-height: 2
+          &.current
+            pointer-events: none
+          &:hover, &.current
+            color: $main-blue
+            transition: 0.2s
+          & i
+            margin-right: 1em
+            width: 1em
+            text-align: center
+
+/**Main section**/
+.main
+  //margin-left: 16.667vw
+  //width: 83.333%
+  //width: 416.665%
+  //height: 100vh
+  //display: block
+  background-image: -moz-radial-gradient( 50% 50%, circle closest-side, rgb(235,235,235) 0%, rgba(1,1,1,0) 100%)
+  background-image: -webkit-radial-gradient( 50% 50%, circle closest-side, rgb(235,235,235) 0%, rgba(1,1,1,0) 100%)
+  background-image: -ms-radial-gradient( 50% 50%, circle closest-side, rgb(235,235,235) 0%, rgba(1,1,1,0) 100%)
+  //position: fixed
+  //top: 0
+  //left: 16.667%
+  //white-space: nowrap
+  //overflow-x: hidden
+  //overflow-y: hidden
+  & .screen-layout
+    //width: 416.665vw
+
+/**Screen**/
+.screen
+  height: 100vh
+  width: 100vw
+  display: block
+  float: left
+  padding-left: 16.667vw
+  box-sizing: border-box
+  & .screen-inner
+    padding: 1.5em
+    & h2
+      font-weight: 100
+      font-size: 3em
+      margin-top: 0
+      line-height: 1em
+      & b
+        font-weight: 100
+        color: $main-blue
+
+/**Home**/
+
+.welcome-text
+  margin-right: 10em
+  & h1
+    font-weight: 100
+    color: $dark
+    font-size: 8em
+    text-align: right
+    margin-top: 0.25em
+    line-height: 1
+    & b
+      color: $main-blue
+      font-weight: 100
+
+.main span
+  font-size: 3em
+  font-weight: 100
+  text-align: right
+  display: block
+
+  /**About section**/
+.parts
+  width: 100%
+  clear: both
+  & .part-left
+    width: 40%
+    float: left
+    display: block
+    & img
+      max-width: 80%
+  & .part-right
+    width: 60%
+    float: left
+    display: block
+    overflow-y: auto
+    max-height: 75vh
+    & p
+      font-family: $text-font
+      font-weight: 300
+      margin-top: 0
+      font-size: 1em
+/**Portfolio**/
+.card-parts
+  display: block
+  overflow-y: hidden
+  width: 100%
+  & .card
+    width: 24%
+    position: relative
+    margin-right: 1%
+    float: left
+    margin-bottom: 2%
+    & .card-overlay
+      position: absolute
+      left: 0
+      bottom: 0
+      right: 0
+      & .card-name
+        display: block
+        width: 100%
+        height: auto
+        cursor: pointer
+        & h3
+          color: $dark
+          font-weight: 100
+          margin: 0 0 0 0.5em
+        & h4
+          color: $white
+          margin: 0 0 0 0.5em
+          font-weight: 100
+          line-height: 0.75em
+          padding-bottom: 0.5em
+      & .card-description
+        font-size: 0.75em
+        background-color: rgba(255,255,255,0.9)
+
+        & b
+          line-height: 2em
+          padding-left: 0.75em
+          font-weight: 300
+          color: $main-blue
+
+        & p
+          margin: 0
+          padding-bottom: 0.5em
+          padding-left: 0.75em
+          line-height: 1.5em
+          font-family: $text-font
+      & .preview
+        display: block
+        height: 0
+        transition: all 0.5s ease
+        overflow: hidden
+        & a
+          display: block
+          text-align: center
+          text-decoration: none
+          font-weight: 100
+          color: #e2edff
+          padding: 2em 0 0.5em
+        & .visit
+          text-decoration: underline
+          font-weight: bold
+          padding: 0
+
+    & .image-wrapper
+      width: 100%
+      overflow: hidden
+      & img
+        width: 100%
+        transition: all ease 0.5s
+
+.one
+  & .card-overlay
+    & .card-name, .preview
+      background-color: $one
+.two
+  & .card-overlay
+    & .card-name, .preview
+      background-color: $two
+.three
+  & .card-overlay
+    & .card-name, .preview
+      background-color: $three
+.four
+  & .card-overlay
+    & .card-name, .preview
+      background-color: $four
+.five
+  & .card-overlay
+    & .card-name, .preview
+      background-color: $five
+.six
+  & .card-overlay
+    & .card-name, .preview
+      background-color: $six
+.seven
+  & .card-overlay
+    & .card-name, .preview
+      background-color: $seven
+.eight
+  & .card-overlay
+    & .card-name, .preview
+      background-color: $eight
+
+#portfolio .hover img
+  width: 120%
+  margin-left: -10%
+  transition: all ease 2s
+#portfolio
+  & .clicked
+    & .preview
+      //height: 150px
+      transition: all 0.5s ease
+
+
+/*Custom plugin styles*/
+
+#cboxCaption
+    position: absolute
+    z-index: 1111111
+    bottom: 0
+    display: block
+    width: 100%
+    background-color: rgba(0,0,0,0.5)
+    height: 75px
