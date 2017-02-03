@@ -3,7 +3,7 @@ $(window).on("load",function(){
 	var $height = $('.part-left img').height();
 	$('.part-right').css('max-height', $height);
 	var $cardHeight = $('.card').width() * 1.41;
-	$('.card, .card-parts, .image-wrapper').css('height', $cardHeight);
+	$('.card, .image-wrapper').css('height', $cardHeight);
 
 	$(".part-right, .card-parts").mCustomScrollbar();
 
