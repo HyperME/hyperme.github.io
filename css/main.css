@@ -111,7 +111,7 @@ body {
     padding: 1.5em; }
     .screen .screen-inner h2 {
       font-weight: 100;
-      font-size: 3em;
+      font-size: 2.5em;
       margin-top: 0;
       line-height: 1em; }
       .screen .screen-inner h2 b {
@@ -132,7 +132,7 @@ body {
       color: #479eff;
       font-weight: 100; }
 
-.main span {
+.home span {
   font-size: 3em;
   font-weight: 100;
   text-align: right;
@@ -152,8 +152,7 @@ body {
     width: 60%;
     float: left;
     display: block;
-    overflow-y: auto;
-    max-height: 75vh; }
+    overflow-y: auto; }
     .parts .part-right p {
       font-family: "Roboto", sans-serif;
       font-weight: 300;
@@ -191,17 +190,20 @@ body {
         cursor: pointer; }
         .card-parts .card .card-overlay .card-name h3 {
           color: #222329;
-          font-weight: 100;
-          margin: 0 0 0 0.5em; }
+          font-weight: 400;
+          margin: 0 0 0 0.5em;
+          font-size: 1em; }
         .card-parts .card .card-overlay .card-name h4 {
           color: #e6e6e6;
           margin: 0 0 0 0.5em;
           font-weight: 100;
           line-height: 0.75em;
-          padding-bottom: 0.5em; }
+          padding-bottom: 0.5em;
+          display: inline; }
       .card-parts .card .card-overlay .card-description {
         font-size: 0.75em;
-        background-color: rgba(255, 255, 255, 0.9); }
+        background-color: rgba(255, 255, 255, 0.9);
+        clear: both; }
         .card-parts .card .card-overlay .card-description b {
           line-height: 2em;
           padding-left: 0.75em;
@@ -209,9 +211,7 @@ body {
           color: #479eff; }
         .card-parts .card .card-overlay .card-description p {
           margin: 0;
-          padding-bottom: 0.5em;
           padding-left: 0.75em;
-          line-height: 1.5em;
           font-family: "Roboto", sans-serif; }
       .card-parts .card .card-overlay .preview {
         display: block;
@@ -235,6 +235,18 @@ body {
       .card-parts .card .image-wrapper img {
         width: 100%;
         transition: all ease 0.5s; }
+
+.click {
+  font-size: 1em;
+  display: block;
+  float: right;
+  margin-right: 0.5em;
+  color: transparent; }
+
+.card:hover .click {
+  color: #fff;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.75); }
 
 .one .card-overlay .card-name, .one .card-overlay .preview {
   background-color: rgba(87, 180, 218, 0.9); }
@@ -277,3 +289,142 @@ body {
   width: 100%;
   background-color: rgba(34, 35, 41, 0.9);
   height: 40px; }
+
+/*Resume*/
+.cv .download {
+  background-color: #57d47d;
+  border: none;
+  padding: 0.5em 1.25em;
+  font-family: "Roboto Slab", sans-serif;
+  border-right: 0 solid #222329;
+  font-weight: 100;
+  position: relative; }
+  .cv .download::after {
+    content: "\f019";
+    display: inline-block;
+    font: normal normal normal 1em/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: transparent;
+    right: -1.75em;
+    position: absolute;
+    top: 35%; }
+  .cv .download a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.15em; }
+  .cv .download:hover {
+    border-width: 2.75em;
+    transition: all 0.3s ease; }
+    .cv .download:hover::after {
+      transition: all 0.5s ease;
+      color: #c3c3c3; }
+
+.cv h3 {
+  margin: 0;
+  font-weight: 400; }
+
+.cv p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0; }
+  .cv p i {
+    color: #479eff; }
+
+.skill-item {
+  display: block;
+  width: 20%;
+  margin: 1%;
+  float: left;
+  text-align: center; }
+  .skill-item .circle {
+    width: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover; }
+    .skill-item .circle img {
+      max-width: 100%; }
+
+/* skill-items*/
+.ui {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/ui.jpg); }
+
+.ps {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/ps.jpg); }
+
+.html {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/html.jpg); }
+
+.css {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/css.jpg); }
+
+.sass {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/sass.jpg); }
+
+.js {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/js.jpg); }
+
+.jquery {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/jquery.jpg); }
+
+.react {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/react.jpg); }
+
+.node {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/node.jpg); }
+
+.wp {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/wp.jpg); }
+
+.git {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/git.jpg); }
+
+.gulp {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 55%, white 100%), url(../img/gulp.jpg); }
+
+circle {
+  fill: transparent;
+  stroke: #eee;
+  stroke-width: 15; }
+
+circle:nth-child(2n) {
+  fill: transparent;
+  stroke: #479eff;
+  stroke-width: 15; }
+
+/*contact*/
+.contact p {
+  font-weight: 100;
+  font-family: "Roboto", sans-serif; }
+  .contact p i {
+    color: #c3c3c3;
+    margin-right: 1em; }
+
+/*responsive*/
+@media all and (max-width: 768px) {
+  .welcome-text h1 {
+    font-size: 4em; }
+  .home span {
+    font-size: 1em; }
+  .menu {
+    width: auto; }
+  .menu .logo .name-wrap, .menu .menu-footer {
+    display: none; }
+  .menu ul li a {
+    font-size: 0em; }
+    .menu ul li a i {
+      font-size: 20px;
+      line-height: 2em; }
+  .parts .part-left, .parts .part-right {
+    width: 100%; }
+  .wrapper {
+    overflow: auto; }
+  .screen .screen-inner h2 {
+    font-size: 1.5em; }
+  .card-parts .card {
+    width: 75%; } }

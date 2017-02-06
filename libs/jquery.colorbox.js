@@ -21,7 +21,7 @@
 		width: false,
 		initialWidth: "600",
 		innerWidth: false,
-		maxWidth: false,
+		maxWidth: "95%",
 		height: "80%",
 		initialHeight: "450",
 		innerHeight: false,
